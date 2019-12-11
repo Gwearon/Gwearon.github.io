@@ -107,7 +107,7 @@ p {
     margin-bottom: 15px;
 }
 
-p b {
+p strong {
     color: rgb(240, 20, 30);;
 }
 
@@ -171,6 +171,10 @@ canvas {
 
 .title h1, .title h3 {
     color: white;
+}
+
+.title h3 {
+    width: 485px;
 }
 
 .title h1 span, .title h3 span {
