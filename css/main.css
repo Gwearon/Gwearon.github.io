@@ -1,0 +1,307 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    min-height: 100%;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* OUR STYLES */
+
+body, html {
+    min-height: 100%;
+    font-family: circular, 'segoe ui', sans-serif;
+    color: #444a50;
+}
+
+h1 {
+    font-size: 71px;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+@media (max-width: 727px) {
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+}
+
+hr {
+    height: 1px;
+    margin: 0;
+    background: rgba(80, 100, 136, 0.25);
+    margin-bottom: 40px;
+    border: none;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+p b {
+    color: rgb(240, 20, 30);;
+}
+
+a {
+    color: #0e9fbc;
+}
+
+ul.features {
+    list-style: disc;
+    font-size: 16px;
+    margin-left: 1.75em;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    color: #568;
+}
+
+ul.features li {
+    margin-bottom: 8px;
+}
+
+ul.features.small {
+    font-size: 90%;
+    margin-bottom: 10px;
+}
+
+ul.features.small li {
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+canvas {
+    display: block;
+    animation: fadeIn 1s;
+    user-select: none;
+}
+
+::-moz-selection {
+    background: #df458d;
+    color: white;
+}
+
+::selection {
+    background: #df458d;
+    color: white;
+}
+
+.title {
+    width: 623px;
+    top: 240px;
+    position: absolute;
+    left: 11%;
+}
+
+.title h1, .title h3 {
+    color: white;
+}
+
+.title h1 span, .title h3 span {
+    color: rgb(240, 20, 30);
+}
+
+section .center {
+    max-width: 1280px;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+}
+
+.row [class^="col"] {
+    float: left;
+    margin: 8px 2%;
+    min-height: 2px;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 96%;
+}
+
+.col-1-sm {
+    width: 4.33%;
+}
+
+.col-2-sm {
+    width: 12.66%;
+}
+
+.col-3-sm {
+    width: 21%;
+}
+
+.col-4-sm {
+    width: 29.33%;
+}
+
+.col-5-sm {
+    width: 37.66%;
+}
+
+.col-6-sm {
+    width: 46%;
+}
+
+.col-7-sm {
+    width: 54.33%;
+}
+
+.col-8-sm {
+    width: 62.66%;
+}
+
+.col-9-sm {
+    width: 71%;
+}
+
+.col-10-sm {
+    width: 79.33%;
+}
+
+.col-11-sm {
+    width: 87.66%;
+}
+
+.col-12-sm {
+    width: 96%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden-sm {
+    display: none;
+}
+
+@media only screen and (min-width: 540px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .container {
+        width: 75%;
+        max-width: 960px;
+    }
+}
+
+main.container {
+    margin-top: 40px;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #07192F;
+    color: white;
+    height: 50px;
+    width: 100%;
+}
+
+footer .container {
+    position: relative;
+}
+
+footer .footer-left {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+footer .footer-right {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
