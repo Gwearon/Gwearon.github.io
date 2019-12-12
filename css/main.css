@@ -71,7 +71,7 @@ h1 {
 
 h2 {
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -104,7 +104,7 @@ hr {
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 p strong {
@@ -284,6 +284,8 @@ main.container {
 }
 
 footer {
+    margin-top: 40px;
+
     background-color: #07192F;
     color: white;
     height: 50px;
