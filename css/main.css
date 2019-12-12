@@ -150,6 +150,7 @@ canvas {
     display: block;
     animation: fadeIn 1s;
     user-select: none;
+    cursor: pointer;
 }
 
 ::-moz-selection {
