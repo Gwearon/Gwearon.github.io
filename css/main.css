@@ -150,7 +150,6 @@ canvas {
     display: block;
     animation: fadeIn 1s;
     user-select: none;
-    cursor: pointer;
 }
 
 ::-moz-selection {
@@ -278,6 +277,20 @@ section .center {
         width: 75%;
         max-width: 960px;
     }
+}
+
+header .socials {
+    padding-top: 20px;
+}
+
+header .socials a {
+    float: right;
+}
+
+header .socials img {
+    margin-left: 10px;
+    width: 50px;
+    width: 50px;
 }
 
 main.container {
