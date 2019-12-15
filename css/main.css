@@ -293,6 +293,10 @@ footer {
     width: 100%;
 }
 
+footer a {
+    color: #0F95B8;
+}
+
 footer .container {
     position: relative;
 }
