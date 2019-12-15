@@ -105,6 +105,7 @@ hr {
 
 p {
     margin-bottom: 20px;
+    overflow-wrap: break-word;
 }
 
 p strong {
