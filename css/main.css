@@ -116,6 +116,14 @@ a {
     color: #0F758F;
 }
 
+.short-id {
+    display: inline-block;
+    width: 175px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 ul.features {
     list-style: disc;
     font-size: 16px;
