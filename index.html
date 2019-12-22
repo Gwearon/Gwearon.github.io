@@ -27,24 +27,26 @@
 
 <body>
     <header class="main" style="width: 100%; height: 642px;">
-        <nav class="container socials clearfix">
+        <div class="container socials clearfix">
             <a rel="noopener" target="_blank" href="https://www.facebook.com/adapointpool"><img alt="Follow us on facebook" src="./img/facebook.png" /></a>
             <a rel="noopener" target="_blank" href="https://twitter.com/AdaPointPool"><img alt="Follow us on twitter" src="./img/twitter.png" /></a>
-        </nav>
+        </div>
         <div class="title">
             <h1><span>A</span>DA <span>P</span>oint <span>P</span>ool</h1>
             <h3>Cardano staking pool that is focusing on security and cost optimization</h3>
         </div>
+        <nav class="container page-navigation">
+            <ul class="clearfix">
+                <li class="active" data-page="home"><a href="#home">Home</a></li>
+                <li data-page="news"><a href="#news">News</a></li>
+                <li data-page="status"><a href="#status">Status &nbsp;&nbsp;<span class="dot green"></span></a></li>
+            </ul>
+        </nav>
     </header>
-    <main class="container">
-        <!-- <nav class="page-navigation">
-            <span class="active">Home</span>
-            <span>News</span>
-        </nav> -->
-
+    <main class="home container">
         <h2>Fee</h2>
         <p>
-            Our current fee for incentivized network is <strong>2%</strong> and is among the smallest among professional Cardano pools.
+            Our current fee for incentivized network is <strong>2%</strong> and is among the smallest among professional Cardano pools. Our ROI
         </p>
         <h2>Staking pool</h2>
         <p>
@@ -93,8 +95,22 @@
             <br/><br/>
             <a rel="noopener" href="https://medium.com/@adapointpool/how-to-delegate-stake-your-ada-with-yoroi-wallet-dae9a0d30031">How to delegate, stake your ADA with Yoroi</a>.
         </p>
-
-        <!-- <a class="twitter-timeline" href="https://twitter.com/AdaPointPool?ref_src=twsrc%5Etfw">Tweets by AdaPointPool</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+    </main>
+    <main class="news container hidden">
+        <a class="twitter-timeline" href="https://twitter.com/AdaPointPool?ref_src=twsrc%5Etfw">Tweets by AdaPointPool</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </main>
+    <main class="status container hidden">
+        <h2>Status</h2>
+        <span class=".dot.green"></span>
+        <p>
+            <span class="dot green"></span>&nbsp; Server <br />
+            <span class="dot green"></span>&nbsp; Network <br />
+            <span class="dot green"></span>&nbsp; Server node <br />
+        </p>
+        <h2>Incidents</h2>
+        <p>
+            Currently there is no incidents to report.
+        </p>
     </main>
     <footer>
         <div class="container">
@@ -111,6 +127,42 @@
             color1: 0xff000e,
             color2: 0xff00f0
         });
+    </script>
+    <script>
+        var navLinks = [].slice.call(document
+            .querySelectorAll('nav.page-navigation li'));
+        var pages = [].slice.call(document
+            .querySelectorAll('main.container'));
+
+        var showPage = function(page) {
+            if (page === "") {
+                page = 'home';
+            }
+
+            // set nav links
+            navLinks.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            document
+                .querySelector('nav.page-navigation li[data-page=' + page + ']')
+                .classList.add('active');
+
+            // set page
+            pages.forEach(function(page) {
+                page.classList.add('hidden');
+            });
+
+            document
+                .querySelector('main.container.' + page)
+                .classList.remove('hidden');
+        };
+
+        window.onhashchange = function() {
+            showPage(location.hash.substring(1));
+        };
+
+        showPage(location.hash.substring(1));
     </script>
 </body>
 

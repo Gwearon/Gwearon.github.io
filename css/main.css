@@ -116,6 +116,10 @@ a {
     color: #0F758F;
 }
 
+.hidden {
+    display: none;
+}
+
 .short-id {
     display: inline-block;
     width: 175px;
@@ -197,6 +201,7 @@ section .center {
 /* ==== GRID SYSTEM ==== */
 
 .container {
+    position: relative;
     width: 90%;
     margin: 0 auto;
 }
@@ -305,8 +310,53 @@ main.container {
     margin-top: 40px;
 }
 
-.page-navigation {
-    position: absolute;
+.dot {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dot.green {
+    background-color: #74e27d;
+}
+
+.dot.red {
+    background-color: #D80F0A;
+}
+
+header nav.container.page-navigation {
+    margin-top: 533px;
+}
+
+header nav.container.page-navigation li {
+    float: left;
+    display: inline-block;
+    color: black;
+    background-color: white;
+    margin-right: 1px;
+
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+header nav.container.page-navigation li.active a {
+    height: 25px;
+    color: black;
+}
+
+header nav.container.page-navigation li a {
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: inline-block;
+    padding: 8px 16px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
 }
 
 footer {
@@ -320,10 +370,6 @@ footer {
 
 footer a {
     color: #0F95B8;
-}
-
-footer .container {
-    position: relative;
 }
 
 footer .footer-left {
