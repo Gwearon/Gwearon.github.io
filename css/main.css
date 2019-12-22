@@ -108,7 +108,7 @@ p {
     overflow-wrap: break-word;
 }
 
-p strong {
+p strong, li strong {
     color: #D80F0A;
 }
 
@@ -130,7 +130,6 @@ ul.features {
     margin-left: 1.75em;
     line-height: 1.4;
     margin-bottom: 40px;
-    color: #568;
 }
 
 ul.features li {
@@ -304,6 +303,10 @@ header .socials img {
 
 main.container {
     margin-top: 40px;
+}
+
+.page-navigation {
+    position: absolute;
 }
 
 footer {
