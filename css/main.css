@@ -353,6 +353,7 @@ header nav.container.page-navigation li {
 header nav.container.page-navigation li.active a {
     height: 25px;
     color: black;
+    outline: none;
 }
 
 header nav.container.page-navigation li a {
