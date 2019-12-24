@@ -322,6 +322,10 @@ main.container {
     background-color: #74e27d;
 }
 
+.dot.orange {
+    background-color: #ffbd2e;
+}
+
 .dot.red {
     background-color: #D80F0A;
 }
