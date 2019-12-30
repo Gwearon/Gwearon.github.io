@@ -112,6 +112,10 @@ p strong, li strong {
     color: #D80F0A;
 }
 
+span.light {
+    opacity: 0.4;
+}
+
 a {
     color: #0F758F;
 }
@@ -335,8 +339,10 @@ main.container {
     background-color: #D80F0A;
 }
 
-header nav.container.page-navigation {
-    margin-top: 531px;
+header .page-navigation-wrapper {
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
 }
 
 header nav.container.page-navigation li {
