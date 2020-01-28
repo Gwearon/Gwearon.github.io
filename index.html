@@ -89,7 +89,7 @@
         </p>
         <h2>What is staking?</h2>
         <p>
-            Staking or delegation is the process where ADA holders delegate the stake of their ADA to a <strong>staking pool</strong>. It enables ADA holders who do not have the skills or desire to run a full node to be part of the network and be <strong>rewarded</strong> proportionally based on the amount of staking that is delegated. <br /><br /> There is <strong>NO security risk</strong> for the user as you are not sending any funds to our pool, just delegating your account.
+            Staking is a process where ADA holders delegate their ADA to a <strong>staking pool</strong>. It enables ADA holders who do not have the skills or desire to run a full node to be part of the network and be <strong>rewarded</strong> proportionally based on the amount of staking that is delegated. <br /><br /> There is <strong>NO security risk</strong> for the user as you are not sending any funds to our pool, just delegating your account.
         </p>
         <h2>Staking calculations</h2>
         <p>
@@ -128,15 +128,37 @@
         </div>
     </footer>
 
-    <script deferred src="js/tree.r92.min.js"></script>
-    <script deferred src="js/vanta.birds.min.js"></script>
     <script deferred>
-        VANTA.BIRDS({
-            el: "header.main",
-            color1: 0xff000e,
-            color2: 0xff00f0
-        });
+        var addScript = function(filename, callback) {
+            var scriptElement=document.createElement('script');
+            scriptElement.type = 'text/javascript';
+            scriptElement.src = filename;
+
+            scriptElement.onload = callback;
+            document.head.appendChild(scriptElement);
+        };
+
+        window.onload = function(){
+            setTimeout(function() {
+                var headerMain = document.querySelector('header.main');
+                headerMain.style.transition = 'background-color 3s';
+                headerMain.style.backgroundColor = '#07192F';
+            }, 300);
+
+            setTimeout(function() {
+                addScript('js/tree.r92.min.js', function() {
+                    addScript('js/vanta.birds.min.js', function() {
+                        VANTA.BIRDS({
+                            el: "header.main",
+                            color1: 0xff000e,
+                            color2: 0xff00f0
+                        });
+                    });
+                });
+            }, 2000);
+        };
     </script>
+
     <script>
         var navLinks = [].slice.call(document
             .querySelectorAll('nav.page-navigation li'));
