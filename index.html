@@ -11,7 +11,7 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'UA-154487251-1');
+        gtag('config', 'UA-154487251-1', { 'anonymize_ip': true });
     </script>
 
     <meta charset="utf-8">
@@ -113,14 +113,17 @@
         <p>
             <span class="dot green"></span>&nbsp; Server <br />
             <span class="dot green"></span>&nbsp; Network <br />
-            <span class="dot green"></span>&nbsp; Cardano node <span class="light">[version 0.8.6]</span> <br />
+            <span class="dot green"></span>&nbsp; Cardano node <span class="light">[version 0.8.9 - custom build]</span> <br />
         </p>
         <h2>Issues</h2>
         <p>
-            <span class="underline">24 December 2019, 08:34:13 UTC (Epoch 10) - APP node</span>: Network has some issues that started 9 hours ago. We are seeing other pools having similar problems. We are still investigating this. <br /> <br/>[UPDATE] Solved. Looks like IOHK had problems synchronizing a number of trusted peers. This has resulted in intermittent connectivity issues for some stake pool operators and Daedalus users.
+            <span class="underline">1. February 2020 (Epoch 49) APP node</span>: After node restarts it immediately stops syncing. <br /> <br/>[UPDATE] Fixed. Seems a similar issue as in the beginning of the month. We quickly resolved it tweaking params and switching the server. Cardano already has a working fix for (should be released next week) so we are also trying a pre-release binary. This is just so we have more options available.
         </p>
         <p>
             <span class="underline">8-9 January 2020 (Epoch 26, 27) APP node</span>: After node restarts it immediately stops syncing. <br /> <br/>[UPDATE] Solved. After a long time of searching for the issue(12h) we found a solution, a node config param, that solved the problem. This issue will be fixed in the next versions of the Cardano node software.
+        </p>
+        <p>
+            <span class="underline">24 December 2019, 08:34:13 UTC (Epoch 10) - APP node</span>: Network has some issues that started 9 hours ago. We are seeing other pools having similar problems. We are still investigating this. <br /> <br/>[UPDATE] Solved. Looks like IOHK had problems synchronizing a number of trusted peers. This has resulted in intermittent connectivity issues for some stake pool operators and Daedalus users.
         </p>
     </main>
     <footer>
