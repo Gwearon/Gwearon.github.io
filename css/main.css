@@ -59,13 +59,13 @@ table {
 
 body, html {
     min-height: 100%;
-    font-family: circular, 'segoe ui', sans-serif;
+    /* font-family: circular, 'segoe ui', sans-serif; */
+    font-family: 'Archivo', 'segoe ui', sans-serif;
     color: #444a50;
 }
 
 h1 {
     font-size: 71px;
-    margin-bottom: 15px;
     letter-spacing: -2px;
 }
 
@@ -143,10 +143,6 @@ ul.features {
     margin-left: 1.75em;
     line-height: 1.4;
     margin-bottom: 20px;
-}
-
-ul.features li {
-    margin-bottom: 8px;
 }
 
 ul.features.small {
