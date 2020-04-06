@@ -42,14 +42,23 @@
             <nav class="container page-navigation">
                 <ul class="clearfix">
                     <li class="active" data-page="news"><a href="#news">News</a></li>
-                    <li data-page="home"><a href="#home">About</a></li>
                     <li data-page="subscribe"><a href="#subscribe">Subscribe</a></li>
-                    <li data-page="status"><a href="#status">Status &nbsp;&nbsp;<span class="dot green"></span></a></li>
+                    <li data-page="faq"><a href="#faq">Pool &nbsp;&nbsp;<span class="dot green"></span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="home container">
+    <main class="news container hidden">
+        <a class="twitter-timeline" href="https://twitter.com/AdaPointPool?ref_src=twsrc%5Etfw">Tweets by AdaPointPool</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </main>
+    <main class="faq container hidden">
+        <h2>APP Status</h2>
+        <span class=".dot.green"></span>
+        <p>
+            <span class="dot green"></span>&nbsp; Server <br />
+            <span class="dot green"></span>&nbsp; Network <br />
+            <span class="dot green"></span>&nbsp; Cardano node <span class="light">[version 0.8.17]</span> <br />
+        </p>
         <h2>APP fee</h2>
         <p>
             <a rel="noopener" href="https://shelleyexplorer.cardano.org/en/stake-pool/aeb2a8584c15e4272fd2b9141f77fb5e3da633506e08f6a8097e41176e6470b1" target="_blank" >APP staking pool</a> has a margin fee of only <strong>2%!</strong> No other fees. ADA Point Pool staking pool fee is one of the lowest among professional and high quality Cardano staking pools.
@@ -61,7 +70,7 @@
         <h2>Why us</h2>
         <p>
             Overall goal of our pool is that people have a <strong>HIGH QUALITY / LOW FEE</strong> pool to delegate to which provides <strong>max return on investment (ROI)</strong> every EPOCH. We also spread knowledge about the whole Cardano ecosystem. <br /><br /> Any money that will be a surplus, and not used maintaining the servers, will go into developing Emurgos' <a rel="noopener" href="https://yoroi-wallet.com/" target="_blank">Yoroi</a> Cardano wallet and some other custom tools that we are planning. <br /> <br />
-            Currently we are mining ~ 97% (weekly avg) of the blocks which is among the highest of all pools! Consistent block creation is crucial to higher overall rewards for our users. ROI is well above the overall average of all the pools and should further increase with new versions of Cardano node software (especially issue <a rel="noopener" href="https://github.com/input-output-hk/jormungandr/issues/1472">#1472</a>).
+            Currently we are mining ~ 97% (weekly avg) of the blocks which is among the highest of all pools! Consistent block creation is crucial to higher overall rewards for our users. ROI is well above the overall average of all the pools and should further increase with new versions of Cardano node software.
         </p>
         <h2>Security</h2>
         <p>
@@ -105,19 +114,7 @@
             <br/><br/>
             <a rel="noopener" href="https://medium.com/@adapointpool/how-to-delegate-stake-your-ada-with-yoroi-wallet-dae9a0d30031">How to delegate, stake your ADA with Yoroi</a>.
         </p>
-    </main>
-    <main class="news container hidden">
-        <a class="twitter-timeline" href="https://twitter.com/AdaPointPool?ref_src=twsrc%5Etfw">Tweets by AdaPointPool</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </main>
-    <main class="status container hidden">
-        <h2>Status APP</h2>
-        <span class=".dot.green"></span>
-        <p>
-            <span class="dot green"></span>&nbsp; Server <br />
-            <span class="dot green"></span>&nbsp; Network <br />
-            <span class="dot green"></span>&nbsp; Cardano node <span class="light">[version 0.8.17]</span> <br />
-        </p>
-        <h2>Issues</h2>
+        <!-- <h2>Issue logs</h2>
         <p>
             <span class="underline">1. February 2020 (Epoch 49) APP node</span>: After node restarts it immediately stops syncing. <br /> <br/>[UPDATE] Fixed. Seems a similar issue as in the beginning of the month. We quickly resolved it tweaking params and switching the server. Cardano already has a working fix for (should be released next week) so we are also trying a pre-release binary. This is just so we have more options available.
         </p>
@@ -126,7 +123,7 @@
         </p>
         <p>
             <span class="underline">24 December 2019, 08:34:13 UTC (Epoch 10) - APP node</span>: Network has some issues that started 9 hours ago. We are seeing other pools having similar problems. We are still investigating this. <br /> <br/>[UPDATE] Solved. Looks like IOHK had problems synchronizing a number of trusted peers. This has resulted in intermittent connectivity issues for some stake pool operators and Daedalus users.
-        </p>
+        </p> -->
     </main>
     <main class="subscribe container hidden">
         <h2>Subscribe</h2>
