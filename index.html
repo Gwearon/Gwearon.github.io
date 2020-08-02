@@ -70,6 +70,10 @@
                 <li><a rel="noopener" href="https://daedaluswallet.io/">Daedalus</a> is the official wallet. If something is unclear, you can <a rel="noopener" href="https://medium.com/@adapointpool/how-to-delegate-stake-your-ada-on-cardano-shelley-7fff9a9cdc1e">check our tutorial</a>.</li>
                 <li>Ledger Nano S/X staking is also supported. You can currently do it with <a rel="noopener" href="https://adalite.io/">AdaLite</a>. <a rel="noopener" href="https://medium.com/@adapointpool/how-to-delegate-stake-your-ada-on-shelley-with-ledger-nano-s-x-e6363a9c9050">See our tutorial if you need help</a>.</li>
             </ul>
+
+            APP ID is:
+            <span class="copy short-id">1cb5d0e006c33ace982a527d4140bc086f99f7d35c27c5ab29600a74</span>
+            <br/><br/>
         </p>
         <div class="flex-container">
             <div class="flex-item icon icon-funds-safe"><h3>Secure</h3><div>You cannot lose your funds with delegation.</div></div>
@@ -262,6 +266,24 @@
         };
 
         showPage(location.hash.substring(1));
+    </script>
+
+    <script deferred>
+        function copyText(event) {
+            var textArea = document.createElement("textarea");
+            textArea.value = event.target.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
+
+            /* Alert the copied text */
+            alert("Text copied to the clipboard: " + event.target.textContent);
+        }
+
+        document.querySelectorAll('.copy').forEach(function(elem) {
+            elem.addEventListener('click', copyText);
+        });
     </script>
 </body>
 

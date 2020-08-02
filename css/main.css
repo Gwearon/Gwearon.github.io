@@ -134,7 +134,27 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 19px;
+    height: 16px;
+}
+
+.copy {
+    position: relative;
+    font-style: italic;
+    padding-right: 30px;
+}
+.copy::after {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    display: block;
+    content: '';
+    width: 50px;
+    height: 20px;
+    background: url(../img/copy.svg) no-repeat 50% 50%;
+}
+.copy:hover {
+    font-weight: 600;
+    cursor: pointer;
 }
 
 ul.features {
