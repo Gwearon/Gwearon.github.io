@@ -154,6 +154,69 @@ ul.features.small li {
     margin-bottom: 0;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.flex-item {
+    margin-top: 20px;
+    position: relative;
+    width: 190px;
+    height: 260px;
+
+    order: 0;
+    flex: 0 1 auto;
+}
+
+.flex-item h3 {
+    position: absolute;
+    top: 120px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-weight: 700;
+}
+
+.flex-item div {
+    position: absolute;
+    top: 150px;
+    width: 130px;
+    height: 65px;
+    margin-left: -65px;
+    left: 50%;
+    text-align: center;
+}
+
+.flex-item.icon {
+    background-position: 50% 20px;
+    background-size: 90px 90px;
+    background-repeat: no-repeat;
+}
+
+.flex-item.icon-funds-safe {
+    background-image: url(../img/flex-menu/funds-safe.svg);
+}
+.flex-item.icon-verified {
+    background-image: url(../img/flex-menu/verified.svg);
+}
+.flex-item.icon-fee {
+    background-image: url(../img/flex-menu/fee.svg);
+}
+.flex-item.icon-uptime {
+    background-image: url(../img/flex-menu/uptime.svg);
+}
+.flex-item.icon-community {
+    background-image: url(../img/flex-menu/community.svg);
+}
+
+
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
