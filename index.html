@@ -218,13 +218,34 @@
             }, 300);
 
             setTimeout(function() {
-                addScript('js/tree.r92.min.js', function() {
-                    addScript('js/vanta.birds.min.js', function() {
-                        VANTA.BIRDS({
-                            el: "header.main",
+                var visualizationScripts = [
+                    {
+                        script: 'vanta.birds.min.js',
+                        prop: 'BIRDS',
+                        settings: {
+                            el: 'header.main',
                             color1: 0xff000e,
                             color2: 0xff00f0
-                        });
+                        }
+                    },
+                    {
+                        script: 'vanta.net.min.js',
+                        prop: 'NET',
+                        settings: {
+                            el: 'header.main',
+                            color: 0xff3f82,
+                            spacing: 20 - Math.floor(5 * document.body.offsetWidth / 1663), // default 15
+                            points: 10 - Math.floor(2 * document.body.offsetWidth / 1663) // default 10
+                        }
+                    }
+                ];
+
+                var visualizationSelection = Math.floor(Math.random() * Math.floor(visualizationScripts.length));
+                var visualization = visualizationScripts[visualizationSelection];
+
+                addScript('js/tree.r92.min.js', function() {
+                    addScript('js/' + visualization.script, function() {
+                        VANTA[visualization.prop](visualization.settings);
                     });
                 });
             }, 2000);
