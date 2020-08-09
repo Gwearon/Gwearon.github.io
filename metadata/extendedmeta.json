@@ -2,5 +2,22 @@
     "itn": {
       "owner": "ed25519_pk1zpht6k7dmcw2xrnql2qnsx3s0aa03t8820x2a8gdmvlywgytxj7qssx2rq",
       "witness": "ed25519_sig1rc870jdjs3yczkhpv9uuuplql74vu9axce6v03seysdd9trg2gknssz6md2z3gykc44qexc9jrv0pka97ag5pjpql4ufk9jayhrqqqc9w352t"
-    }
+    },
+    "info": {
+        "location": "Germany",
+        "social": {
+            "twitter_handle": "AdaPointPool",
+            "telegram_handle": "gwearon",
+            "facebook_handle": "adapointpool",
+            "youtube_handle": "Ada Point Pool",
+            "github_handle": "Gwearon"
+        },
+        "about": {
+            "me": "My nick is Gwearon. I am a computer programmer with about a two decades of programming experience. My interests are functional programming, smart contracts and math.",
+            "server": "VPS, AMD Epyc"
+        }
+    },
+    "my-pool-ids": [
+        "1cb5d0e006c33ace982a527d4140bc086f99f7d35c27c5ab29600a74",
+    ]
 }
