@@ -1,7 +1,7 @@
 {
     "itn": {
-        "owner": "ed25519_pk1zpht6k7dmcw2xrnql2qnsx3s0aa03t8820x2a8gdmvlywgytxj7qssx2rq",
-        "witness": "ed25519_sig1rc870jdjs3yczkhpv9uuuplql74vu9axce6v03seysdd9trg2gknssz6md2z3gykc44qexc9jrv0pka97ag5pjpql4ufk9jayhrqqqc9w352t"
+      "owner": "ed25519_pk1zpht6k7dmcw2xrnql2qnsx3s0aa03t8820x2a8gdmvlywgytxj7qssx2rq",
+      "witness": "ed25519_sig1rc870jdjs3yczkhpv9uuuplql74vu9axce6v03seysdd9trg2gknssz6md2z3gykc44qexc9jrv0pka97ag5pjpql4ufk9jayhrqqqc9w352t"
     },
     "info": {
         "url_png_icon_64x64": "https://adapointpool.com/metadata/AdaPointPoolLogo64x64.png",
@@ -14,22 +14,8 @@
             "github_handle": "Gwearon"
         },
         "about": {
-            "me": "Providing secure staking rewards for institutions and individuals. Trusted ITN operator with a proven track record:
-
-- Produced 3,000+ blocks
-- Distributed 2,500,000+ ADA to our users
-- Had consistent low fee of 2%
-- Users delegated 6 billion+ ADA to our pool
-",
-            "server": "VPS servers in Germany and Finland
-
-- 2 x 8 vCores AMD Epyc, 8GB, SSD, backups, 10 Gbit connection
-- 2 x 3 vCores AMD Epyc, 4GB, SSD, backups, 10 Gbit connection
-
-- This can change in the future based on demand.
-- We are also running Cardano Jormungandr testnet node
-- We are also running a cardano-db-sync with cardano-graph-ql node for use in other Cardano related projects
-"
+            "me": "My nick is Gwearon. I am a computer programmer with about a two decades of programming experience. My interests are functional programming, smart contracts and math.",
+            "server": "VPS, AMD Epyc"
         }
     },
     "my-pool-ids": [
