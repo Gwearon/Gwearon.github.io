@@ -15,7 +15,7 @@
 		},
 		"about": {
 			"me": "Providing secure staking rewards for institutions and individuals. Trusted ITN operator with a proven track record: Produced 3,000+ blocks, Distributed 2,500,000+ ADA to our users which delegated 6 billion+ ADA to our pool!",
-			"server": "2 Relays and 1 Main node. Running on 2 x 8 vCores AMD Epyc, 8GB, 2 x 3 vCores AMD Epyc, 4GB. All instances have 10 Gbit connection and a SSD drive with backups. We are also running a Cardano Jormungandr testnet node, cardano-db-sync (with cardano-graph-ql) node for our internal use in our other Cardano related projects.\\n."
+			"server": "2 Relays and 1 Main node. Running on 2 x 8 vCores AMD Epyc, 8GB, 2 x 3 vCores AMD Epyc, 4GB. All instances have 10 Gbit connection and a SSD drive with backups. We are also running a Cardano Jormungandr testnet node, cardano-db-sync (with cardano-graph-ql) node for our internal use in our other Cardano related projects."
 		}
 	},
 	"my-pool-ids": [
