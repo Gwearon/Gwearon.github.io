@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css?v=1.7">
+    <link rel="stylesheet" href="css/main.css?v=1.8">
 </head>
 
 <body>
@@ -309,6 +309,10 @@
                     >twitter</a> and other <a href="https://github.com/vacuumlabs/adalite/wiki" target="_blank" rel="nofollow noopener"
                     >publications</a>
             </li>
+            <li>
+                <a href="https://adapointearth.com" rel="nofollow noopener" target="_blank">Ada Point Earth - Community pool browser and visualization</a>. Currently it works on destop browsers and will be optimized for mobile if enough interest.<br /><br />
+                <a href="https://adapointearth.com" rel="nofollow noopener" target="_blank"><img class="ape" src="img/adaPointEarth.jpg" /></a><br />
+            </li>
         </ul>
         <h2>Security</h2>
         <p>
@@ -473,7 +477,7 @@
                     }
                 ];
 
-                var visualizationSelection = Math.floor(Math.random() * Math.floor(visualizationScripts.length));
+                var visualizationSelection = 0;//Math.floor(Math.random() * Math.floor(visualizationScripts.length));
                 var visualization = visualizationScripts[visualizationSelection];
 
                 addScript('js/tree.r92.min.js', function() {
