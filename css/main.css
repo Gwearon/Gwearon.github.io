@@ -260,7 +260,7 @@ canvas {
     user-select: none;
 }
 
-::-moz-selection {
+/* ::-moz-selection {
     background: #df458d;
     color: white;
 }
@@ -268,7 +268,7 @@ canvas {
 ::selection {
     background: #df458d;
     color: white;
-}
+} */
 
 .title {
     max-width: 80%;
