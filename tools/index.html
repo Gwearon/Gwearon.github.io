@@ -1,0 +1,243 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154487251-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154487251-1', { 'anonymize_ip': true });
+    </script>
+
+    <meta charset="utf-8">
+
+    <title>Ada Point Pool - #APP</title>
+    <meta name="description"
+        content="This is the home site for ada point pool - tools section. It answers when will user get the delegation staking pool rewards. Ada point pool is a Cardano cryptocurrency pool">
+    <meta name="author" content="James">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css?v=1.8">
+    <link rel="stylesheet" href="./css/main.override.css?v=1.8">
+</head>
+
+<body>
+    <header class="main" style="width: 100%; height: 400px;">
+        <div class="container socials clearfix">
+            <a rel="noopener" target="_blank" href="https://translate.google.com/translate?hl=en&sl=en&tl=ja&u=https%3A%2F%2Fadapointpool.com"><img alt="
+                自動翻訳-日本" title="自動翻訳-日本" src="../img/translate.png" /></a>
+            <a rel="noopener" target="_blank" href="https://www.facebook.com/adapointpool"><img alt="Follow us on facebook" src="../img/facebook.png" /></a>
+            <a rel="noopener" target="_blank" href="https://twitter.com/Ada_Point_Pool"><img alt="Follow us on twitter" src="../img/twitter.png" /></a>
+        </div>
+        <div class="title">
+            <h1><span>W</span>en first rewards?</h1>
+            <h3>I just delegated to Cardano staking pool. When will I get my first rewards?</h3>
+        </div>
+        <div class="page-navigation-wrapper">
+            <nav class="container page-navigation">
+                <ul class="clearfix">
+                    <li class="active" data-page="wen-first-rewards"><a href="#news">Wen rewards</a></li>
+                    <li><a href="/">APP Pool &nbsp;&nbsp;<span class="dot green"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="wen-first-rewards container hidden">
+        <h2>I have delegate my ADA stack on</h2><br />
+        <input class="datetime-picker" placeholder="Select date..." /><br /><br />
+        <h2>You will get your first rewards on <span class="rewards-date"></span></h2><br />
+        <p>More precisely you will get the first rewards at <span class="rewards-date-time">...</span>. Also add a couple of minutes for state to update in your particular wallet.</p>
+        <p>After that initial delay you will get your rewards every 5 days (1 epoch in Cardano).</p>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-left">&copy;&nbsp;ADA Point Pool</div>
+            <div class="footer-right"><a rel="noopener" href="mailto:info@adapointpool.com?subject=Mail%20from%20adapointpool.com">Contact Us</a></div>
+        </div>
+    </footer>
+
+    <script>
+        var addScript = function(filename, callback) {
+            var scriptElement=document.createElement('script');
+            scriptElement.type = 'text/javascript';
+            scriptElement.src = filename;
+
+            scriptElement.onload = callback;
+            document.head.appendChild(scriptElement);
+        };
+
+        window.onload = function(){
+            setTimeout(function() {
+                var headerMain = document.querySelector('header.main');
+                headerMain.style.transition = 'background-color 3s';
+                headerMain.style.backgroundColor = '#07192F';
+            }, 300);
+
+            setTimeout(function() {
+                var visualizationScripts = [
+                    {
+                        script: 'vanta.birds.min.js',
+                        prop: 'BIRDS',
+                        settings: {
+                            el: 'header.main',
+                            color1: 0xff000e,
+                            color2: 0xff00f0
+                        }
+                    },
+                    {
+                        script: 'vanta.net.min.js',
+                        prop: 'NET',
+                        settings: {
+                            el: 'header.main',
+                            color: 0xff3f82,
+                            backgroundColor: 0x07192F,
+                            spacing: 20 - Math.floor(5 * document.body.offsetWidth / 1663), // default 15
+                            points: 10 - Math.floor(2 * document.body.offsetWidth / 1663) // default 10
+                        }
+                    },
+                    {
+                        script: 'vanta.globe.min.js',
+                        prop: 'GLOBE',
+                        settings: {
+                            el: 'header.main',
+                            color2: 0xa49f9f,
+                            backgroundColor: 0x07192F
+                        }
+                    }
+                ];
+
+                var visualizationSelection = 0;//Math.floor(Math.random() * Math.floor(visualizationScripts.length));
+                var visualization = visualizationScripts[visualizationSelection];
+
+                addScript('../js/tree.r92.min.js', function() {
+                    addScript('../js/' + visualization.script, function() {
+                        VANTA[visualization.prop](visualization.settings);
+                    });
+                });
+            }, 2000);
+        };
+    </script>
+
+    <script>
+        var navLinks = [].slice.call(document
+            .querySelectorAll('nav.page-navigation li'));
+        var pages = [].slice.call(document
+            .querySelectorAll('main.container'));
+
+        var showPage = function(page) {
+            if (page === "") {
+                page = 'wen-first-rewards';
+            }
+
+            // set nav links
+            navLinks.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            document
+                .querySelector('nav.page-navigation li[data-page=' + page + ']')
+                .classList.add('active');
+
+            // set page
+            pages.forEach(function(page) {
+                page.classList.add('hidden');
+            });
+
+            document
+                .querySelector('main.container.' + page)
+                .classList.remove('hidden');
+        };
+
+        function setURLState(state) {
+            if (typeof state.stakingDatetime !== 'undefined') {
+                var path = '#wen-first-rewards';
+                if (state.stakingDatetime !== null) {
+                    path += '?stakingDatetime=' + encodeURIComponent(state.stakingDatetime.toISOString());
+                }
+                location.hash = path;
+            }
+        }
+
+        function setStateFromURL(hash) {
+            var path = hash.split('?')[0];
+            var params = hash.split('?')[1];
+            if (path === '#wen-first-rewards') {
+                var stakingDatetime = new Date(decodeURIComponent(params.split('=')[1]));
+                if (!isNaN(stakingDatetime.getTime())) {
+                    setStakingDatetime(stakingDatetime);
+                } else {
+                    // invalid clear date
+                    setURLState({ stakingDatetime: null });
+                }
+            }
+        }
+
+        window.onhashchange = function() {
+            showPage(location.hash.substring(1).split('?')[0]);
+            setStateFromURL(location.hash);
+        };
+
+        showPage(location.hash.substring(1).split('?')[0]);
+</script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        var shelleySystemStart = "2017-09-23T21:44:51Z";
+        var shelleyEpochLength = 432000;
+        var unixSystemStart = new Date(shelleySystemStart).getTime() / 1000;
+
+        function getWenRewardsEpoch(unixStakingStartDatetime) {
+            var stakingStartingEpoch = Math.abs(unixSystemStart - unixStakingStartDatetime) / shelleyEpochLength;
+
+            var stakingRewardsSnapshotEpoch = Math.ceil(stakingStartingEpoch);
+            var stakingRewardsEarnedEpoch = stakingRewardsSnapshotEpoch + 1;
+            var stakingRewardsCalculatedEpoch = stakingRewardsEarnedEpoch + 1;
+            var stakingRewardsPaidEpoch = stakingRewardsCalculatedEpoch + 1;
+
+            return stakingRewardsPaidEpoch;
+        }
+
+        function epochToLocalDatetime(epoch) {
+            var unixEpochDatetime = unixSystemStart + epoch * shelleyEpochLength;
+            var datetime = new Date(unixEpochDatetime * 1000)
+            return [datetime.getFullYear(), datetime.getMonth() + 1, datetime.getDate()].join('-') + ' ' +
+                [datetime.getHours(), datetime.getMinutes(), datetime.getSeconds()].join(':');
+        }
+
+        function setStakingDatetime(selectedDatetime) {
+            // var unixNow = Date.now() / 1000;
+            // var currentEpoch = Math.floor(Math.abs(unixSystemStart - unixNow) / shelleyEpochLength);
+            var unixStakingStartDatetime = parseInt(new Date(selectedDatetime).getTime() / 1000, 10);
+
+            var stakingRewardsPaidEpoch = getWenRewardsEpoch(unixStakingStartDatetime);
+
+            var stakingRewardsPaidDatetime = epochToLocalDatetime(stakingRewardsPaidEpoch);
+            document.querySelector('.rewards-date').textContent = stakingRewardsPaidDatetime.split(' ')[0];
+            document.querySelector('.rewards-date-time').textContent = stakingRewardsPaidDatetime;
+
+            stakingDatetimePicker.setDate(selectedDatetime, false);
+        }
+
+        var stakingDatetimePicker = flatpickr(document.querySelector('.datetime-picker'), {
+            enableTime: true,
+            // position: 'above',\
+            inline: true,
+            onChange: function(selectedDatetimes) {
+                setURLState({ stakingDatetime: new Date(selectedDatetimes[0]) });
+            }
+        });
+
+        setStateFromURL(location.hash);
+    </script>
+</body>
+
+</html>

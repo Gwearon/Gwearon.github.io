@@ -301,6 +301,12 @@ section .center {
     width: 90%;
     margin: 0 auto;
 }
+.container.header-container {
+    position: relative;
+    width: 80% !important;
+    top: 10%;
+    left: 10%;
+}
 
 .row {
     position: relative;

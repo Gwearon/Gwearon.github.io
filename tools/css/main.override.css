@@ -1,0 +1,36 @@
+.title {
+    top: 150px;
+}
+
+.title h1 {
+    line-height: 37px;
+}
+
+main.wen-first-rewards h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main.wen-first-rewards input {
+    padding: 5px;
+    text-align: center;
+    margin-left: calc(50% - 91px);
+}
+
+main.wen-first-rewards .rewards-date {
+    background-color: #df458d;
+    color: white;
+}
+
+main.wen-first-rewards .rewards-date-time {
+    font-weight: bold;
+}
+
+.flatpickr-calendar {
+    z-index: 1000000000 !important;
+    margin-left: calc(50% - 155px);
+}
+
+footer {
+    display: none;
+}
