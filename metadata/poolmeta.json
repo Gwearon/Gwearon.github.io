@@ -3,5 +3,6 @@
     "description":"Providing secure staking rewards for institutions and individuals.",
     "ticker":"APP",
     "homepage":"https://adapointpool.com",
-    "extended":"https://adapointpool.com/metadata/extendedmeta.json"
+    "extended":"https://adapointpool.com/metadata/extendedmeta.json",
+    "cexplorerVerification":"c5c06d17de70647584"
 }
